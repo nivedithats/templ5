@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .example{
+            display: flex;
+            justify-content: center;
+            /* background-color: aquamarine; */
+            min-height: 100vh;
+            align-items: center;
+            background-color: #F6D6D6;
+        }
+        .cup{
+            width: 300px;
+            height: 200px;
+            background-color: #67729D;
+            border-radius: 30px 30px 100px 100px;
+            position: relative;
+            z-index: 1;
+            box-shadow: inset 50px 1px 10px #2f3b6b, inset 0px 1px 10px #2f3b6b;
+        }
+        .cup::before{
+            content: "";
+            position: absolute;
+            width: 86%;
+            height: 100px;
+            background: repeating-radial-gradient(#E48F45 2%, #522f10 30%);
+            left: 0;
+            top: -50px;
+            border-radius: 100%;
+            border: 20px solid #fff;
+        }
+        .cup:after{
+            content: "";
+            position: absolute;
+            top: 50px;
+            right: -78px;
+            width: 100px;
+            height: 50%;
+            background-color: transparent;
+            border: 20px solid #67729D;
+            border-radius: 100px;
+        }
+        .plate{
+            width: 120%;
+            height: 100px;
+            background-color: #fff;
+            position: absolute;
+            bottom: -90px;
+            border-radius: 100%;
+            z-index: -1;
+            box-shadow: 0px 0px 10px #000, inset 3px 3px 10px #492a2a,inset 3px 3px 50px #000 ;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>CSS POSITION AND PSEUDO ELEMENTS(BEFORE AND AFTEER)</h1>
+    </center>
+    
+    <section class="example">
+        <div class="cup">
+            <div class="plate"></div>
+        </div>
+    </section>
+</body>
+</html>
+

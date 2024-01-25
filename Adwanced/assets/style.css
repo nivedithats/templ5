@@ -50,10 +50,11 @@
     font-size: 18pt;/*points*/
 }
 .cssUnits .h5{
+    font-size: 1pc;/*picas*/
 
 }
 .cssUnits .h6{
-
+           font-size: 30px;
 }
 
 .cssVisibilityDisply .cssVisibility{
@@ -79,8 +80,8 @@
     text-align: justify;
     column-count: 4;
     column-gap: 5px;
-    column-rule: 2px solid rgb(255, 187, 52);
-    column-width: 300px;
+    column-rule: 2px solid rgb(196, 79, 16);
+    /*column-width: 400px;*/
 }
 .cssColumnCount h1{
     column-span: all;
@@ -89,5 +90,194 @@
     background-color: teal;
     color: #fff;
     padding: 30px;
-    opacity: 0.2;/*opacity is used to make the transparent element*/
+    opacity: 0.9;/*opacity is used to make the transparent element*/
+}
+/*p11.html*/ 
+.cssAttribute>h1{
+    color: brown;
+}
+.cssAttribute>p{
+    color: yellow;
+}
+.cssAttribute>p[title]{
+    background-color: black;
+    padding: 20px;
+}
+.cssAttribute>h1[title]{
+    background-color: teal;
+    padding: 20px;
+}
+/*example2 */
+.cssAttribute>p>abbr[id]{
+    background-color: red;
+    padding: 40px;
+}
+/*example3*/
+.cssAttribute>form>input{
+    padding: 30px;
+}
+.cssAttribute>form>input[type]{
+    font-size: 2rem;
+}
+.cssAttribute>form>input[type="email"]{
+    background-color: cornflowerblue;
+}
+.cssAttribute>form>input[type="text"]{
+    background-color: rgb(3, 18,46);
+}
+.cssAttribute>form>input[type="date"]{
+    background-color: rgb(196, 79, 16);
+    border-radius: 100px;
+    color: #fff;
+}
+/*p12.html*/
+.cssAttribute>div>img[title~="wallpaper"]{
+    width: 300px;
+    border-radius: 100px;
+}
+/*p13.html*/
+.cssAttribute>div>h1[class|="header"]{
+    background-color: #ff4c4c;
+    padding: 30px;
+}
+/*p14.html*/
+.cssAttribute>section>h3[title^="heading"]{
+padding: 30px;
+background-color: #ff4c4c;
+}
+/*p15.html*/
+.cssPseudoClass>h1:hover{
+    color: blue;
+}
+.cssPseudoClass>a:hover{
+    color: yellow;
+}
+.cssPseudoClass>a:link{
+    color: #fff;
+}
+.cssPseudoClass>a:active{
+    color: aqua;
+}
+.cssPseudoClass>a:visited{
+    color: rgb(21, 238, 115);
+}
+/*p16.html*/
+.pseudoElement>section>:first-child::first-line{
+    font-size: 30px;
+    color: #9a1717;
+    background-color: #ff4c4c;
+}
+.pseudoElement .s2 p::first-letter{
+    font-size: 50px;
+    color: green;
+    font-weight: 900;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* p17.html */
+.pseudoElementH1 h1{
+    color: #ffffff;
+    background-color: teal;
+    width: fit-content;
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.pseudoElementH1 h1::before{
+    content:"this is heading2";
+    background-color: #9a1717;
+    padding: 30px;
+    /* width:200px; */
+}
+.pseudoElementH1 h1::after{
+    content: "this is the heading3";
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    background-color: #54179a;
+}
+ /* p18.html */
+.cssPosition h1{
+    background-color: #54179a;
+    padding: 30px;
+    color: #fff;
+}
+.cssPosition>h1:first-child{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.cssPosition .second{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.cssPosition{
+    min-height: 150vh;
+}
+.cssPosition div{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: cadetblue;
+    padding: 30px;
+
+
+}
+.cssPosition div h1{
+           width: fit-content;
+}
+.cssPosition div h1:first-child{
+    background-color: #9a1717;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.cssPosition div .fifth{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.cssPosition .eight{
+    background-color: red;
+    position: sticky;
+    top: 10px;
+}
+/* p20.html */
+.zIndex section{
+    width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    padding: 30px;
+    background-color: antiquewhite;
+    position: absolute;
+}
+.zIndex{
+    position: relative;
+}
+.zIndex .frist{
+    background-color: teal;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+}
+.zIndex .second{
+    background-color: #ff4c4c;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+}
+.zIndex .third{
+    background-color: #54179a;
+    top: 100px;
+    left: 100px;
+    z-index: 3;
+}
+.zIndex .frist:hover{
+    z-index: 4;
+}
+.zIndex .second:hover{
+    z-index: 4;
+}
+.zIndex .third:hover{
+    z-index: -1;
 }
